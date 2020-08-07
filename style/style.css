@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    background: #cbac7d;
+    display:flex;
+    justify-content: space-around;
+}
+header #header-logo img{
+    width: 200px;
+    height: 100px;
+}
+nav{
+    position: relative;
+}
+nav li a{
+    color:black;
+    display:inline-block;
+    padding: 8px 25px;
+}
+.sub_menu{
+    position: absolute;
+    border: 1px solid #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s ease-in;
+}
+
+header nav #main_menu>li:hover .sub_menu{ 
+    visibility: visible;
+    opacity: 1;
+}
+#main_menu{
+    margin-top: 40px;
+    text-align: center;
+    border: 1px solid #000;
+}
+#main_menu::after{
+    content:"";
+    clear: both;
+    display:block;
+}
+#main_menu{
+
+}
+#main_menu>li{
+    font-weight: bold;
+    float:left;
+    position: relative;
+}
+#main_menu>li:first-child{
+}
+section{
+    width: 1200px;
+    margin: 0 auto;
+    height: 300px;
+    overflow: hidden;
+}
+section #img_slide img{
+    width: 1200px;
+    height: 300px;
+}
+
+aside{
+    width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.notice_area, .gallery, .banner{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    border-left: 1px solid #000;
+}
+.notice_area{
+    border-left:none;
+}
+.notice_area .notice_content{
+    width: 350px;
+    height: 150px;
+    line-height: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.notice_btn{
+    width: 70px;
+    border: 1px solid #000;
+    text-align: center;
+    position: absolute;
+    left: 20px;
+    top: -32px;
+}
+
+.gallery_content{
+    width: 350px;
+    height: 150px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000;
+}
+
+.gallery_content img{
+    width: 100px;
+    height: 140px;
+}
+
+.gallery_btn{
+    width: 70px;
+    font-weight: bold;
+    border: 1px solid #000;
+    text-align: center;
+    position: absolute;
+    top: 12px;
+    left: 50px;
+}
+
+.banner img{
+    width: 398px;
+    height: 200px;
+}
+
+footer{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    background: #cbac7d;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer_sns img{
+    width: 50px;
+    height: 50px;
+}
