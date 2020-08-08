@@ -28,8 +28,9 @@ nav{
 }
 nav li a{
     color:black;
-    display:inline-block;
-    padding: 8px 25px;
+    display:block;
+    width: 150px;
+    padding: 5px 25px;
 }
 .sub_menu{
     position: absolute;
@@ -37,6 +38,12 @@ nav li a{
     opacity: 0;
     visibility: hidden;
     transition: all 0.15s ease-in;
+}
+
+#main_menu > li{
+    font-weight: bold;
+    float:left;
+    position: relative;
 }
 
 header nav #main_menu>li:hover .sub_menu{ 
@@ -53,14 +60,15 @@ header nav #main_menu>li:hover .sub_menu{
     clear: both;
     display:block;
 }
+#sub_menu::after{
+    content:"";
+    clear: both;
+    display:block;
+}
 #main_menu{
 
 }
-#main_menu>li{
-    font-weight: bold;
-    float:left;
-    position: relative;
-}
+
 #main_menu>li:first-child{
 }
 section{
@@ -140,6 +148,7 @@ aside{
     position: absolute;
     top: 12px;
     left: 50px;
+    border-bottom:none;
 }
 
 .banner img{
