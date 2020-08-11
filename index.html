@@ -99,11 +99,11 @@
         <aside>
             <div class="notice_area">
                 <div class="notice_btn">공지사항</div>
-                    <ul class="notice_content">
-                        <li>2019 시민큐레이터 프로젝트 2019/05/07</li>
-                        <li>SeMA신소장품 멀티-엑세스 4 2019/05/03</li>
-                        <li>월 북서울미술관 문화행사 일정 2019/02/22</li>
-                    </ul>
+                <ul class="notice_content">
+                    <li>2019 시민큐레이터 프로젝트 2019/05/07</li>
+                    <li>SeMA신소장품 멀티-엑세스 4 2019/05/03</li>
+                    <li>월 북서울미술관 문화행사 일정 2019/02/22</li>
+                </ul>
             </div>
 
             <div class="gallery">
@@ -139,6 +139,14 @@
     <!--wrap-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        $("ul#main_menu>li").mouseover(function () {
+            $(this).children("ul").stop().slideDown();
+        });
+
+        $("ul#main_menu>li").mouseout(function () {
+            $(this).children("ul").stop().slideUp();
+        });
+
         setInterval(function () {             //setInterval(); 함수 반복 실행 메소드
             $(".container").delay("2500");        //2.5초 = 2500밀리초 정지
             $(".container").animate({ marginTop: "-304px" }, "500");  //0.5초 동안 위쪽여백:-300px
@@ -149,7 +157,9 @@
         });
 
 
+
     </script>
+
 </body>
 
 </html>
